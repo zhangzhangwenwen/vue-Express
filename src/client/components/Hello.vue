@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted () {
-    this.$http.get('http://localhost:4000/home')
+    this.$http.get('/home')
     .then(response => {
       this.msg = response.data
     })
