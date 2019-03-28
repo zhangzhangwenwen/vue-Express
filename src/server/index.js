@@ -10,6 +10,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware'
 
 import router from './route/router'
 import home from './route/home'
+import user from './route/user'
 import config from '../../webpack.config'
 
 const app = express()
@@ -37,7 +38,7 @@ app.use(webpackHotMiddleware(compiler))
 
 app.use('/', router)
 app.use('/home', home)
-
+app.use('/user', user)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

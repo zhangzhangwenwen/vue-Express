@@ -29,6 +29,14 @@ module.exports = {
     ],
     loaders: [
       {
+        test: /\.css$/, //正则表达式，匹配.css文件
+        loader: 'style-loader!css-loader'  //处理顺序 从右到左
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
